@@ -1,0 +1,6 @@
+{
+    "parent": "livestreammod:item/kaupenbow",
+    "textures": {
+        "layer0": "livestreammod:item/kaupenbow_pulling_1"
+    }
+}
