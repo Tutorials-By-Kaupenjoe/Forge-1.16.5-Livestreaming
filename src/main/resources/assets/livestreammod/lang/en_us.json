@@ -1,4 +1,11 @@
 {
   "item.livestreammod.kaupenbow": "KaupenBow",
+
+  "block.livestreammod.kaupencoral_dead": "KaupenCoral Dead",
+  "block.livestreammod.kaupencoral": "KaupeCoral",
+  "block.livestreammod.kaupen_furnace": "Kaupen Furnace",
+
+  "tile.livestreammod.kaupenfurnace": "Kaupen Furnace",
+
   "tooltip.block.livestreammod.kaupencoral_dead": "\u00A73Seems dead to me, man!\u00A73"
 }

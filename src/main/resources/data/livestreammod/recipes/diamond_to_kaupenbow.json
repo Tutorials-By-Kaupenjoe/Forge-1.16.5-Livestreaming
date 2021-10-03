@@ -1,0 +1,9 @@
+{
+  "type": "livestreammod:kaupenfurnace",
+  "ingredient": {
+    "item": "minecraft:diamond"
+  },
+  "result": "livestreammod:kaupenbow",
+  "experience": 69.0,
+  "cookingtime": 420
+}

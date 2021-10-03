@@ -32,6 +32,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> KAUPEN_CORAL = registerBlock("kaupencoral",
             () -> new CoralPlantBlock(ModBlocks.KAUPEN_CORAL_DEAD.get(), AbstractBlock.Properties.create(Material.CORAL)));
 
+    public static final RegistryObject<Block> KAUPEN_FURNACE = registerBlock("kaupen_furnace",
+            () -> new KaupenFurnaceBlock(AbstractBlock.Properties.create(Material.ROCK)));
+
+
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, String tooltipKey) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tooltipKey);

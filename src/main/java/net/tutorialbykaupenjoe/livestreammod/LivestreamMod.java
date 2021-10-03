@@ -1,5 +1,6 @@
 package net.tutorialbykaupenjoe.livestreammod;
 
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.Item;
@@ -13,8 +14,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tutorialbykaupenjoe.livestreammod.block.ModBlocks;
+import net.tutorialbykaupenjoe.livestreammod.container.ModContainers;
 import net.tutorialbykaupenjoe.livestreammod.event.ModEvents;
 import net.tutorialbykaupenjoe.livestreammod.item.ModItems;
+import net.tutorialbykaupenjoe.livestreammod.item.crafting.ModRecipeSerializers;
+import net.tutorialbykaupenjoe.livestreammod.screen.KaupenFurnaceScreen;
+import net.tutorialbykaupenjoe.livestreammod.tile.ModTileEntities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,6 +38,11 @@ public class LivestreamMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModTileEntities.register(eventBus);
+        ModContainers.register(eventBus);
+
+        ModRecipeSerializers.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::doClientStuff);
 
@@ -48,6 +58,8 @@ public class LivestreamMod
         makeBow(ModItems.KAUPENBOW.get());
         RenderTypeLookup.setRenderLayer(ModBlocks.KAUPEN_CORAL.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.KAUPEN_CORAL_DEAD.get(), RenderType.getCutout());
+
+        ScreenManager.registerFactory(ModContainers.KAUPEN_FURNACE_CONTAINER.get(), KaupenFurnaceScreen::new);
     }
 
     private void makeBow(Item item) {
