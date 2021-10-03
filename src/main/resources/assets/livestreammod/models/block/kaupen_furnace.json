@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "livestreammod:block/kaupenfurnace_front",
+        "down": "livestreammod:block/kaupenfurnace_bottom",
+        "up": "livestreammod:block/kaupenfurnace_top",
+        "north": "livestreammod:block/kaupenfurnace_front",
+        "east": "livestreammod:block/kaupenfurnace_side",
+        "south": "livestreammod:block/kaupenfurnace_back",
+        "west": "livestreammod:block/kaupenfurnace_side"
+    }
+}
