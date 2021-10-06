@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "livestreammod:block/herobrinesfurnace",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "livestreammod:block/herobrinesfurnace"
+    },
+    "facing=south": {
+      "model": "livestreammod:block/herobrinesfurnace",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "livestreammod:block/herobrinesfurnace",
+      "y": 270
+    }
+  }
+}

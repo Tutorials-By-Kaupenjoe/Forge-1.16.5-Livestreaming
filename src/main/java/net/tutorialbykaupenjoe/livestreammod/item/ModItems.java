@@ -14,6 +14,8 @@ public class ModItems {
     public static final RegistryObject<Item> KAUPENBOW = ITEMS.register("kaupenbow",
             () -> new ModBowItem(new Item.Properties().group(ModItemGroup.LIVESTREAM_GROUP)));
 
+    public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupenstaff",
+            () -> new StaffItem(new Item.Properties().group(ModItemGroup.LIVESTREAM_GROUP)));
 
 
     public static void register(IEventBus eventBus) {

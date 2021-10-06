@@ -6,6 +6,8 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.StateContainer;
+import net.minecraft.tags.ITag;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -34,6 +36,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> KAUPEN_FURNACE = registerBlock("kaupen_furnace",
             () -> new KaupenFurnaceBlock(AbstractBlock.Properties.create(Material.ROCK)));
+
+    public static final RegistryObject<Block> KAUPEN_ALTAR = registerBlock("altar",
+            () -> new AltarBlock(AbstractBlock.Properties.create(Material.ROCK).notSolid()));
+
+    public static final RegistryObject<Block> HEROBRINES_FURNACE = registerBlock("herobrinesfurnace",
+            () -> new HerobrinesFurnaceBlock(AbstractBlock.Properties.create(Material.ROCK).notSolid()));
 
 
 

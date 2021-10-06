@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "livestreammod:block/altar",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "livestreammod:block/altar"
+    },
+    "facing=south": {
+      "model": "livestreammod:block/altar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "livestreammod:block/altar",
+      "y": 270
+    }
+  }
+}

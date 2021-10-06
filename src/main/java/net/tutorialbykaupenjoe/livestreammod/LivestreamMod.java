@@ -9,13 +9,15 @@ import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tutorialbykaupenjoe.livestreammod.block.ModBlocks;
 import net.tutorialbykaupenjoe.livestreammod.container.ModContainers;
-import net.tutorialbykaupenjoe.livestreammod.event.ModEvents;
+import net.tutorialbykaupenjoe.livestreammod.entity.MagicSpellRenderer;
+import net.tutorialbykaupenjoe.livestreammod.entity.ModEntityTypes;
 import net.tutorialbykaupenjoe.livestreammod.item.ModItems;
 import net.tutorialbykaupenjoe.livestreammod.item.crafting.ModRecipeSerializers;
 import net.tutorialbykaupenjoe.livestreammod.screen.KaupenFurnaceScreen;
@@ -43,6 +45,8 @@ public class LivestreamMod
 
         ModRecipeSerializers.register(eventBus);
 
+        ModEntityTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::doClientStuff);
 
@@ -58,8 +62,19 @@ public class LivestreamMod
         makeBow(ModItems.KAUPENBOW.get());
         RenderTypeLookup.setRenderLayer(ModBlocks.KAUPEN_CORAL.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.KAUPEN_CORAL_DEAD.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.KAUPEN_ALTAR.get(), RenderType.getCutout());
 
         ScreenManager.registerFactory(ModContainers.KAUPEN_FURNACE_CONTAINER.get(), KaupenFurnaceScreen::new);
+
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.MAGIC_SPELL.get(), MagicSpellRenderer::new);
+
+        ItemModelsProperties.registerProperty(ModItems.KAUPENSTAFF.get(), new ResourceLocation("pull"), (p_239429_0_, p_239429_1_, p_239429_2_) -> {
+            if (p_239429_2_ == null) {
+                return 0.0F;
+            } else {
+                return p_239429_2_.getActiveItemStack() != p_239429_0_ ? 0.0F : (float)(p_239429_0_.getUseDuration() - p_239429_2_.getItemInUseCount()) / 20.0F;
+            }
+        });
     }
 
     private void makeBow(Item item) {

@@ -1,9 +1,12 @@
 {
   "item.livestreammod.kaupenbow": "KaupenBow",
+  "item.livestreammod.kaupenstaff": "KaupenStaff",
 
   "block.livestreammod.kaupencoral_dead": "KaupenCoral Dead",
   "block.livestreammod.kaupencoral": "KaupeCoral",
   "block.livestreammod.kaupen_furnace": "Kaupen Furnace",
+  "block.livestreammod.altar": "KaupenAltar",
+  "block.livestreammod.herobrinesfurnace": "Herobrines Furnace",
 
   "tile.livestreammod.kaupenfurnace": "Kaupen Furnace",
 

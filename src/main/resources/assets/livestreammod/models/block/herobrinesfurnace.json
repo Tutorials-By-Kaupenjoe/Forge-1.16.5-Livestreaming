@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "livestreammod:block/herobrinesfurnace_front",
+    "down": "livestreammod:block/herobrinesfurnace_side",
+    "up": "livestreammod:block/herobrinesfurnace_top",
+    "north": "livestreammod:block/herobrinesfurnace_front",
+    "east": "livestreammod:block/herobrinesfurnace_side",
+    "south": "livestreammod:block/herobrinesfurnace_side",
+    "west": "livestreammod:block/herobrinesfurnace_side"
+  }
+}
