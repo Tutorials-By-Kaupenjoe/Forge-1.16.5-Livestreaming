@@ -37,6 +37,11 @@ public class StaffItem extends ShootableItem {
         }
     }
 
+    @Override
+    public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        return super.hitEntity(stack, target, attacker);
+    }
+
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
 
