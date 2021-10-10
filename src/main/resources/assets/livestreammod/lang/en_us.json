@@ -7,8 +7,10 @@
   "block.livestreammod.kaupen_furnace": "Kaupen Furnace",
   "block.livestreammod.altar": "KaupenAltar",
   "block.livestreammod.herobrinesfurnace": "Herobrines Furnace",
+  "block.livestreammod.kaupen_crafting_table": "Kaupen Crafting Table",
 
   "tile.livestreammod.kaupenfurnace": "Kaupen Furnace",
+  "livestreammod.container.crafting": "Kaupen Crafting Table",
 
   "tooltip.block.livestreammod.kaupencoral_dead": "\u00A73Seems dead to me, man!\u00A73"
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S#   ",
+    "S #  ",
+    "S  # ",
+    "S #  ",
+    "S#   "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:acacia_planks"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "livestreammod:kaupenbow"
+  }
+}

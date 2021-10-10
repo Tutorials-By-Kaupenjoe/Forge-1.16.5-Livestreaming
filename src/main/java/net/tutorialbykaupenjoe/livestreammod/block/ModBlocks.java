@@ -43,6 +43,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> HEROBRINES_FURNACE = registerBlock("herobrinesfurnace",
             () -> new HerobrinesFurnaceBlock(AbstractBlock.Properties.create(Material.ROCK).notSolid()));
 
+    public static final RegistryObject<Block> KAUPEN_CRAFTING_TABLE = registerBlock("kaupen_crafting_table",
+            () -> new KaupenCraftingTableBlock(AbstractBlock.Properties.create(Material.WOOD)));
+
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, String tooltipKey) {

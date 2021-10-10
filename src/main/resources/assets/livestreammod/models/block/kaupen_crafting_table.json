@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "livestreammod:block/kaupen_crafting_table_front",
+    "north": "livestreammod:block/kaupen_crafting_table_front",
+    "south": "livestreammod:block/kaupen_crafting_table_side",
+    "east": "livestreammod:block/kaupen_crafting_table_side",
+    "west": "livestreammod:block/kaupen_crafting_table_front",
+    "up": "livestreammod:block/kaupen_crafting_table_top",
+    "down": "livestreammod:block/oak_planks"
+  }
+}

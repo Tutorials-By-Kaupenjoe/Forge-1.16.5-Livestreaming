@@ -18,6 +18,12 @@ public class ModContainers {
                 return new KaupenFurnaceContainer(windowId, inv);
             })));
 
+    public static final RegistryObject<ContainerType<KaupenWorkbenchContainer>> KAUPEN_CRAFTING_CONTAINER
+            = CONTAINERS.register("kaupen_crafting_container",
+            () -> IForgeContainerType.create(((windowId, inv, data) -> {
+                return new KaupenWorkbenchContainer(windowId, inv);
+            })));
+
     public static void register(IEventBus eventBus) {
         CONTAINERS.register(eventBus);
     }
