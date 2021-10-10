@@ -4,6 +4,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShootableItem;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
@@ -39,6 +41,8 @@ public class StaffItem extends ShootableItem {
 
     @Override
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        // Here we can add effects on hit with this weapon to the target
+        target.addPotionEffect(new EffectInstance(Effects.LEVITATION, 200, 2));
         return super.hitEntity(stack, target, attacker);
     }
 
