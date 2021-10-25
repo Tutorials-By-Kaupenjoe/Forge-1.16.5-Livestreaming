@@ -27,7 +27,7 @@ public class MagicSpellRenderer<T extends MagicSpellEntity> extends EntityRender
         IVertexBuilder ivertexbuilder =
                 bufferIn.getBuffer(this.modelMagicSpell.getRenderType(this.getEntityTexture(entityIn)));
         modelMagicSpell.render(matrixStackIn, ivertexbuilder, packedLightIn, OverlayTexture.NO_OVERLAY,
-                1.0F, 1.0F, 1.0F, 1.0F);
+                0.0F, 1.0F, 0.0F, 0.2F);
     }
 
     @Override
