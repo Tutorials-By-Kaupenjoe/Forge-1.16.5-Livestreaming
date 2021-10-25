@@ -22,8 +22,7 @@ public class MagicSpellEntity extends AbstractArrowEntity {
     }
 
     public IPacket<?> createSpawnPacket() {
-        Entity entity = this.getShooter();
-        return new SSpawnObjectPacket(this, entity == null ? 0 : entity.getEntityId());
+        return NetworkHooks.getEntitySpawningPacket(this);
     }
 
     @Override
