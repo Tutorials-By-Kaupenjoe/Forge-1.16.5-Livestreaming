@@ -13,7 +13,7 @@ import net.tutorialbykaupenjoe.livestreammod.LivestreamMod;
 import net.tutorialbykaupenjoe.livestreammod.entity.projectile.MagicSpellEntity;
 
 public class MagicSpellRenderer<T extends MagicSpellEntity> extends EntityRenderer<T> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(LivestreamMod.MOD_ID, "magicspell");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(LivestreamMod.MOD_ID, "textures/entity/magicspell.png");
     protected final EntityModel<T> modelMagicSpell = new MagicSpellModel<>();
 
     public MagicSpellRenderer(EntityRendererManager rendererManager) {
@@ -28,7 +28,6 @@ public class MagicSpellRenderer<T extends MagicSpellEntity> extends EntityRender
                 bufferIn.getBuffer(this.modelMagicSpell.getRenderType(this.getEntityTexture(entityIn)));
         modelMagicSpell.render(matrixStackIn, ivertexbuilder, packedLightIn, OverlayTexture.NO_OVERLAY,
                 1.0F, 1.0F, 1.0F, 1.0F);
-        matrixStackIn.pop();
     }
 
     @Override
